@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doris Alphonso Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/three@0.152.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <header class="glass-header">
+        <div class="site-banner">
+            <img src="doriss.jpg" alt="Doris Alphonso" size="400">
+            <h1>Doris Alphonso</h1>
+        </div>
+
+        <nav class="navbar">
+            <button onclick="location.href='#home'">Home</button>
+            <button onclick="location.href='#about'">About Me</button>
+            <button onclick="location.href='#skills'">Skills</button>
+            <button onclick="location.href='#gallery'">Gallery</button>
+            <button onclick="location.href='#contact'">Contact</button>
+            <button id="theme-toggle">
+                <span id="theme-icon">🌙</span>
+            </button>
+        </nav>
+    </header>
+    <div id="tsparticles"></div>
+
+    <section id="home" class="fade-in">
+        <h2>Welcome to My Digital Scrapbook</h2>
+        <p id="typed-text"></p>
+        <div id="3d-container"></div>
+        <a href="#skills" class="creative-button">Explore my skills</a>
+    </section>
+
+    <section id="about" class="fade-in">
+        <h2>About Me</h2>
+        <img src="fig.jpg" alt="Doris Alphonso" width="300">
+        <p>Hello! I’m Doris, a passionate designer & developer creating immersive digital experiences. I am currently pursuing a Bachelor of Technology in Computer Engineering at Fr. Conceicao Rodrigues College of Engineering, with a strong passion for exploring and mastering the ever-evolving world of technology. My academic journey began at St. Anthony’s Convent School, where I completed my SSC with an impressive score of 90.60%, followed by my HSC at Thomas Baptista Junior College, achieving a score of 80.33% in the PCMB stream.
+
+            With an SGPA of 8.15, I continue to build a solid foundation in computer engineering, driven by a deep interest in software development, systems design, and problem-solving. My technical skills span across programming languages, data structures, and algorithms, and I am constantly exploring new technologies to enhance my expertise.
+            
+            In addition to academics, I am eager to apply my skills in real-world projects and internships, aiming to contribute innovative solutions to complex challenges. I aspire to become a skilled engineer who blends creativity with technical excellence to drive the future of technology.</p>
+            </section>
+    <section id="skills" class="skills-section">
+        <h2>🧠 My Skills</h2>
+        <div class="skills-grid">
+    
+            <div class="skill-card-box">
+                <h3>⚙ Technical</h3>
+                <ul>
+                    <li>C Programming</li>
+                    <li>Javascript</li>
+                    <li>Web Development</li>
+                    <li>HTML & CSS Design</li>
+                    <li>Python Programming</li>
+                    <li>Matlab</li>
+                </ul>
+            </div>
+    
+            <div class="skill-card-box">
+                <h3>🎨 Creative</h3>
+                <ul>
+                    <li>UI/UX Design</li>
+                    <li>Sketching</li>
+                    <li>Digital Art</li>
+                    <li>Photography</li>
+                    <li>Calligraphy</li>
+                </ul>
+            </div>
+    
+            <div class="skill-card-box">
+                <h3>🏆 Professional</h3>
+                <ul>
+                    <li>Project Management</li>
+                    <li>Team Leadership</li>
+                    <li>Problem Solving</li>
+                    <li>Critical Thinking</li>
+                </ul>
+            </div>
+              <div class="skill">
+                <p>HTML</p>
+                <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                <div class="skill">
+                    <p>Javascript</p>
+                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                    <div class="skill">
+                        <p>Python</p>
+                        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                        <div class="skill">
+                            <p>C Programming</p>
+                            <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
+            <a href="sketches.html" id="sketchingButton">Sketching</a>
+        </div>
+    </section>
+    <section id="my-work">
+        <h2>💼 My Work</h2>
+        <div class="work-content">
+            <div class="work-text">
+                <p>Throughout my academic journey, I have engaged in diverse projects, assignments, and creative design tasks — continuously expanding my knowledge and refining my skills. Here are a few key highlights:</p>
+                <ul>
+                    <li>💻 <strong>Python Mini-Project:</strong> Developed a website using Python, HTML, and CSS.</li>
+                    <li>🎨 <strong>Canva Presentations:</strong> Created visually engaging presentations and vision boards for both academic and personal projects, effectively communicating ideas and goals with creativity and clarity.</li>
+                    <li>💡 <strong>IDT Project:</strong> Developed a women’s safety app and an innovative gadget named ‘HERSHIELD’ both of which were selected for presentation at the university level, showcasing my ability to create impactful solutions with real-world applications.</li>
+                </ul>
+            </div>
+            <div class="work-image">
+                <img src="her.jpg" alt="My Work Showcase" width="500">
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="fade-in">
+        <h2> Through my lens!</h2>
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="heesecake.jpg" alt="Gallery Image 1">
+                <img src="cafe.jpg" alt="Gallery Image 2">
+                <img src="car.jpg" alt="Gallery Image 3">
+                <img src="burger.jpg" alt="Gallery Image 4">
+                <img src="donut.jpg" alt="Gallery Image 5">
+            </div>
+        </div>
+
+        <h3>I'm</h3>
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="1.jpg" alt="Traditional 1" width="200">
+                <img src="2.jpg" alt="Traditional 2" width="200">
+                <img src="re.jpg" alt="Traditional 3" width="200">
+                <img src="4.jpg" alt="Traditional 4" width="200">
+                <img src="saree.jpg" alt="Traditional 4" width="200">
+            </div>
+        </div>
+
+        <h3>Fitness</h3>
+        <div class="carousel">
+            <div class="carousel-track">
+                <img src="fit1.jpg" alt="Fitness 1" width="200">
+                <img src="fit2.jpg" alt="Fitness 2" width="200">
+                <img src="fit3.jpg" alt="Fitness 3" width="200">
+                <img src="fit4.jpg" alt="Fitness 4" width="200">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="fade-in">
+        <section id="contact" class="fade-in">
+            <h2>☎ Contact Me</h2>
+        
+            <a href="https://www.instagram.com/doriiiiiiss_21?igsh=MW52cnllY3Rqb2Vvdw==" target="_blank" class="social-icon">
+                <img src="ins.jpg" alt="Instagram">
+            </a>
+        
+            <a href="https://www.linkedin.com/in/doris-alphonso-b81972356?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-icon">
+                <img src="in.jpg" alt="LinkedIn">
+            </a>
+            <a href="mailto:dorisalphonso21@gmail.com" target="_blank" class="social-icon">
+                <img src="email.jpg" alt="Email">
+            </a>
+            <form action="https://formspree.io/f/mvgknnlk" method="POST" style="margin-top: 20px;">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="message" placeholder="Message" required>
+                <button type="submit" class="glow-button">Send</button>
+            </form>
+        </section>
+
+    <script src="script.js"></script>
+    <footer>
+        <p>© 2025 Doris Alphonso. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
