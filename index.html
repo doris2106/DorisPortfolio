@@ -170,6 +170,21 @@
                 <button type="submit" class="glow-button">Send</button>
             </form>
         </section>
+<!-- ===== Dynamic Contact Form (ADDED) ===== -->
+<section id="dynamic-contact" style="padding: 40px; max-width: 600px; margin: auto;">
+  <h2>Contact Manager</h2>
+
+  <form id="contactForm">
+    <input type="text" id="name" name="name" placeholder="Name" required />
+<input type="email" id="email" name="email" placeholder="Email" required />
+<input type="number" id="phone" name="phone" placeholder="Phone Number" required />
+
+    <button type="submit">Add Contact</button>
+  </form>
+
+  <ul id="contactList"></ul>
+</section>
+<!-- ===== End Contact Manager ===== -->
 
     <script src="script.js"></script>
     <footer>
