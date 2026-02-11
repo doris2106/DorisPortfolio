@@ -136,3 +136,90 @@ tracks.forEach(track => {
     const images = track.innerHTML;
     track.innerHTML += images;  // Duplicate images for seamless loop
 });
+/* ===== Contact Manager Logic (ADDED) ===== */
+
+let contacts = JSON.parse(localStorage.getItem("contacts")) || [];
+let editIndex = null;
+
+const form = document.getElementById("contactForm");
+const list = document.getElementById("contactList");
+
+function displayContacts() {
+  list.innerHTML = "";
+
+  contacts.forEach((c, index) => {
+    const li = document.createElement("li");
+
+    li.innerHTML = `
+      <strong>${c.name}</strong><br>
+      ${c.email}<br>
+      ${c.phone}<br>
+      <button class="edit-btn">Edit</button>
+      <button class="delete-btn">Delete</button>
+    `;
+
+    // DELETE BUTTON
+    li.querySelector(".delete-btn").addEventListener("click", function () {
+      contacts.splice(index, 1);
+      localStorage.setItem("contacts", JSON.stringify(contacts));
+      displayContacts();
+    });
+
+    // EDIT BUTTON
+    li.querySelector(".edit-btn").addEventListener("click", function () {
+      document.getElementById("name").value = c.name;
+      document.getElementById("email").value = c.email;
+      document.getElementById("phone").value = c.phone;
+      editIndex = index;
+    });
+
+    list.appendChild(li);
+  });
+}
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault(); // STOP normal submission
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+
+  if (!name || !email || !phone) {
+    alert("All fields are required");
+    return;
+  }
+
+  // ADD TO LOCAL LIST
+  if (editIndex === null) {
+    contacts.push({ name, email, phone });
+  } else {
+    contacts[editIndex] = { name, email, phone };
+    editIndex = null;
+  }
+
+  localStorage.setItem("contacts", JSON.stringify(contacts));
+  displayContacts();
+
+  // SEND TO FORMSPREE (Email)
+  fetch("https://formspree.io/f/mvzbzwjp", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      name: name,
+      email: email,
+      phone: phone
+    })
+  })
+  .then(response => {
+    if (response.ok) {
+      alert("Message sent successfully!");
+    } else {
+      alert("Error sending message.");
+    }
+  })
+  .catch(() => alert("Network error."));
+
+  form.reset();
+});
