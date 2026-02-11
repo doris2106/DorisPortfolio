@@ -435,3 +435,30 @@ footer {
     padding: 15px;
    color:white;
 }
+/* ===== Contact Manager Styling (ADDED) ===== */
+#dynamic-contact input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+#dynamic-contact button {
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#contactList {
+  list-style: none;
+  padding: 0;
+}
+
+#contactList li {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+#contactList button {
+  margin-left: 5px;
+}
